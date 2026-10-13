@@ -1,0 +1,23 @@
+{
+  "name": "git-cure",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Terminal-native Git diagnostics and recovery tool powered by Gemma",
+  "workspaces": [
+    "apps/dashboard",
+    "packages/shared",
+    "packages/cli",
+    "services/gemma",
+    "services/server"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@git-cure/dashboard",
+    "dev:server": "npm run dev --workspace=@git-cure/server",
+    "dev:all": "npm run dev --workspace=@git-cure/server & npm run dev --workspace=@git-cure/dashboard",
+    "build": "npm run build --workspace=@git-cure/dashboard",
+    "typecheck": "npm run typecheck --workspace=@git-cure/dashboard && npm run typecheck --workspace=@git-cure/shared && npm run typecheck --workspace=@git-cure/cli && npm run typecheck --workspace=@git-cure/gemma"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

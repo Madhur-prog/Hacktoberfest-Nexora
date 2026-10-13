@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "Read(//c/Hacktoberfest/**)",
+      "Bash(npx tsc *)",
+      "Bash(npm list *)",
+      "Bash(npm ls *)"
+    ]
+  }
+}

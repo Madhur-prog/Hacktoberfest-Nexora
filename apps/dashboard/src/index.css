@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    background-color: #0d1117;
+  }
+
+  body {
+    @apply bg-gc-bg text-gc-text font-mono antialiased;
+  }
+
+  /* Scrollbar — keep it minimal on the dark bg */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0d1117;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #21262d;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #30363d;
+  }
+}
+
+@layer utilities {
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-blink {
+      animation: none;
+      opacity: 1;
+    }
+  }
+}
